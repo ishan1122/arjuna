@@ -61,7 +61,8 @@ document.getElementById('whatsappShare').addEventListener('click', function () {
         document.querySelector('h1').innerText = `Happy Diwali from ${userName}!`;
 
         const message = `Happy Diwali,! Wishing you joy, prosperity, and happiness. 🎉🌟
-        from  ${userName}`;
+        from  ${userName}
+        https://ishan1122.github.io/arjuna/`;
         const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
     } else {
