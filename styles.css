@@ -37,6 +37,7 @@ body {
 /* Container styles */
 .container {
     position: relative; /* Ensure container is positioned above the video */
+
     z-index: 1; /* Bring the container above the video */
     padding-top: 200px; /* Set padding to 400px from the top */
     padding-bottom: 50px; /* Optional: Add padding at the bottom */
