@@ -4,17 +4,18 @@ body {
     text-align: center;
     margin: 0; /* Remove default margin */
     overflow: auto; /* Allow scrolling */
+    background-color: black; /* Set background color to black */
 }
 
 #backgroundVideo {
-    position: fixed; /* Fixes the video to the background */
-    top: 50%; /* Centers the video vertically */
+    position: fixed; /* Fixes the video to the top */
+    top: 0; /* Align the video to the top of the screen */
     left: 50%; /* Centers the video horizontally */
     min-width: 100%; /* Minimum width to cover the viewport */
     min-height: 100%; /* Minimum height to cover the viewport */
     width: auto; /* Auto width */
     height: auto; /* Auto height */
-    transform: translate(-50%, -50%); /* Centers the video */
+    transform: translate(-50%, 0); /* Center horizontally, align top */
     z-index: -1; /* Places video behind other content */
 }
 
@@ -151,4 +152,3 @@ button {
 .hidden {
     display: none; /* Hide elements with this class */
 }
-
