@@ -1,0 +1,149 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffd700; /* Gold text color for contrast */
+    text-align: center;
+    overflow: hidden; /* Prevent scrollbars */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full height to accommodate video */
+}
+
+#backgroundVideo {
+    position: fixed; /* Fixed position to cover entire screen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the background */
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+/* Container styles */
+.container {
+    position: relative; /* Ensure container is positioned above the video */
+    z-index: 1; /* Bring the container above the video */
+    margin-top: 50px; /* Margin from the top */
+    padding: 0 20px; /* Add horizontal padding */
+    display: flex; /* Flexbox for better alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+/* Diya container */
+#diyaContainer {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive image size */
+#diyaContainer img {
+    width: 30%; /* Use percentage to make it responsive */
+    max-width: 150px; /* Maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* QR Message */
+#qrMessage {
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Fireworks Styles */
+#fireworksContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to go through the container */
+    z-index: -1;
+}
+
+/* Firework styles */
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffd700; /* Gold color for fireworks */
+    animation: fireworkAnimation 1.2s ease-in-out forwards;
+}
+
+/* Firework animation */
+@keyframes fireworkAnimation {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(0); }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+    h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    #diyaContainer img {
+        width: 50%; /* Increase the size on smaller screens */
+    }
+
+    .container {
+        margin-top: 20px; /* Reduce margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for mobile devices */
+    h1 {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    #diyaContainer img {
+        width: 70%; /* Further increase the size on mobile screens */
+    }
+
+    .container {
+        margin-top: 10px; /* Further reduce margin on mobile */
+    }
+}
+
+input[type="text"] {
+    width: 80%; /* Responsive width */
+    padding: 10px; /* Padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 2px solid #ffd700; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #333; /* Dark text color */
+}
+
+button {
+    background-color: #ffd700; /* Gold background */
+    border: none; /* No border */
+    color: #333; /* Dark text color */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    font-size: 16px; /* Font size */
+    margin: 10px 0; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.hidden {
+    display: none; /* Hide elements with this class */
+}

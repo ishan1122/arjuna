@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="your-video.mp4" type="video/mp4"> <!-- Ensure this path is correct -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container" style="padding-top: 500px;">
+        <h1>Tap the Diya to Light Someone's Home</h1>
+        <div id="diyaContainer">
+            <img src="lit_diya.jpeg" id="diya" alt="Unlit Diya">
+        </div>
+        <div id="qrMessage" class="hidden">
+            <p>Scan the QR code below to light someone else's home!</p>
+            <img src="qrcode.jpeg" id="qrCode" alt="QR Code" style="width: 150px;">
+        </div>
+        <!-- Fireworks Container -->
+        <div id="fireworksContainer" class="hidden"></div>
+        <!-- Background Sound -->
+        <audio id="fireworkSound" src="fireworks.mp3"></audio>
+        
+        <!-- WhatsApp Share Button -->
+        <button id="whatsappShare">Share Your Custom Wish on WhatsApp</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
