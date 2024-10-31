@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     color: #ffd700; /* Gold text color for contrast */
@@ -10,14 +8,30 @@ body {
 }
 
 #backgroundVideo {
-    position: fixed; /* Fixed position to cover entire screen */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the background */
-    z-index: -1; /* Ensure it stays behind other content */
+    position: fixed; /* Fixes the video to the background */
+    top: 50%; /* Centers the video vertically */
+    left: 50%; /* Centers the video horizontally */
+    min-width: 100%; /* Minimum width to cover the viewport */
+    min-height: 100%; /* Minimum height to cover the viewport */
+    width: auto; /* Auto width */
+    height: auto; /* Auto height */
+    transform: translate(-50%, -50%); /* Centers the video */
+    z-index: -1; /* Places video behind other content */
 }
+@media (max-width: 768px) { /* For tablets and smaller screens */
+    #backgroundVideo {
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile screens */
+    #backgroundVideo {
+        min-height: 100%; /* Ensure full coverage */
+        min-width: auto; /* Allow auto width */
+    }
+}
+
 
 /* Container styles */
 .container {
@@ -102,6 +116,12 @@ body {
 
     .container {
         margin-top: 20px; /* Reduce margin on smaller screens */
+        padding-top: 150px; /* Add more space at the top for visibility */
+    }
+
+    #qrMessage {
+        position: relative; /* Ensure it stays in view */
+        margin-top: 30px; /* Increase top margin for more space */
     }
 }
 
@@ -117,6 +137,12 @@ body {
 
     .container {
         margin-top: 10px; /* Further reduce margin on mobile */
+        padding-top: 180px; /* More padding to accommodate the content */
+    }
+
+    #qrMessage {
+        position: relative; /* Ensure it stays in view */
+        margin-top: 30px; /* Increase top margin for more space */
     }
 }
 
