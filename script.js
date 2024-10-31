@@ -60,7 +60,8 @@ document.getElementById('whatsappShare').addEventListener('click', function () {
         // Update the heading to include the user's name
         document.querySelector('h1').innerText = `Happy Diwali from ${userName}!`;
 
-        const message = `Happy Diwali, ${userName}! Wishing you joy, prosperity, and happiness. 🎉🌟`;
+        const message = `Happy Diwali,! Wishing you joy, prosperity, and happiness. 🎉🌟
+        from  ${userName}`;
         const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
     } else {
