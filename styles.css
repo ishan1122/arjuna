@@ -8,11 +8,12 @@ body {
 }
 
 #backgroundVideo {
-    position: fixed; /* Fixes the video to the top */
+    position: abslute; /* Fixes the video to the top */
     top: 0; /* Align the video to the top of the screen */
     left: 50%; /* Centers the video horizontally */
     min-width: 100%; /* Minimum width to cover the viewport */
-   
+    padding-bottom: 400px;
+    height: 500px;
     width: auto; /* Auto width */
     height: auto; /* Auto height */
     transform: translate(-50%, 0); /* Center horizontally, align top */
