@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     color: #ffd700; /* Gold text color for contrast */
     text-align: center;
-    overflow: hidden; /* Prevent scrollbars */
+    overflow: auto; /* Allow scrolling */
     margin: 0; /* Remove default margin */
-    height: 100vh; /* Full height to accommodate video */
+    height: auto; /* Allow height to expand with content */
 }
 
 #backgroundVideo {
@@ -18,6 +18,7 @@ body {
     transform: translate(-50%, -50%); /* Centers the video */
     z-index: -1; /* Places video behind other content */
 }
+
 @media (max-width: 768px) { /* For tablets and smaller screens */
     #backgroundVideo {
         width: 100vw; /* Full viewport width */
@@ -32,7 +33,6 @@ body {
     }
 }
 
-
 /* Container styles */
 .container {
     position: relative; /* Ensure container is positioned above the video */
@@ -42,6 +42,11 @@ body {
     display: flex; /* Flexbox for better alignment */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
+}
+
+/* Ensure the container has a minimum height */
+.container {
+    min-height: 100vh; /* Ensure it covers full viewport height */
 }
 
 /* Diya container */
