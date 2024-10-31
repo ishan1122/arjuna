@@ -2,9 +2,9 @@ body {
     font-family: Arial, sans-serif;
     color: #ffd700; /* Gold text color for contrast */
     text-align: center;
-    overflow: hidden; /* Prevent scrollbars */
     margin: 0; /* Remove default margin */
     height: 100vh; /* Full height to accommodate video */
+    overflow: auto; /* Allow scrolling */
 }
 
 #backgroundVideo {
@@ -18,6 +18,8 @@ body {
     transform: translate(-50%, -50%); /* Centers the video */
     z-index: -1; /* Places video behind other content */
 }
+
+/* Adjustments for responsive behavior */
 @media (max-width: 768px) { /* For tablets and smaller screens */
     #backgroundVideo {
         width: 100vw; /* Full viewport width */
@@ -32,13 +34,12 @@ body {
     }
 }
 
-
 /* Container styles */
 .container {
     position: relative; /* Ensure container is positioned above the video */
     z-index: 1; /* Bring the container above the video */
-    margin-top: 50px; /* Margin from the top */
-    padding: 0 20px; /* Add horizontal padding */
+    padding-top: 400px; /* Set padding to 400px from the top */
+    padding-bottom: 50px; /* Optional: Add padding at the bottom */
     display: flex; /* Flexbox for better alignment */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
@@ -115,13 +116,7 @@ body {
     }
 
     .container {
-        margin-top: 20px; /* Reduce margin on smaller screens */
         padding-top: 150px; /* Add more space at the top for visibility */
-    }
-
-    #qrMessage {
-        position: relative; /* Ensure it stays in view */
-        margin-top: 30px; /* Increase top margin for more space */
     }
 }
 
@@ -136,24 +131,8 @@ body {
     }
 
     .container {
-        margin-top: 10px; /* Further reduce margin on mobile */
         padding-top: 180px; /* More padding to accommodate the content */
     }
-
-    #qrMessage {
-        position: relative; /* Ensure it stays in view */
-        margin-top: 30px; /* Increase top margin for more space */
-    }
-}
-
-input[type="text"] {
-    width: 80%; /* Responsive width */
-    padding: 10px; /* Padding */
-    margin: 10px 0; /* Margin for spacing */
-    border: 2px solid #ffd700; /* Gold border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    color: #333; /* Dark text color */
 }
 
 button {
