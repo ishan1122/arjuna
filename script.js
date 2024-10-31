@@ -53,3 +53,18 @@ document.getElementById('whatsappShare').addEventListener('click', function () {
         alert("You need to enter a name to share your wish!"); // Alert if no name is entered
     }
 });
+// Share custom wish on WhatsApp
+document.getElementById('whatsappShare').addEventListener('click', function () {
+    const userName = prompt("Please enter your name:"); // Prompt for user's name
+    if (userName) {
+        // Update the heading to include the user's name
+        document.querySelector('h1').innerText = `Happy Diwali from ${userName}!`;
+
+        const message = `Happy Diwali, ${userName}! Wishing you joy, prosperity, and happiness. 🎉🌟`;
+        const whatsappLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+    } else {
+        alert("You need to enter a name to share your wish!"); // Alert if no name is entered
+    }
+});
+
